@@ -367,20 +367,20 @@ public class Commands {
     }
 
     public static void removeRepositoriesAndPluginRepositories(String pomFilePath) throws Exception {
-        File pomFile = new File(pomFilePath);
-        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(pomFile);
-        NodeList repositories = doc.getElementsByTagName("repositories");
-        if (repositories.getLength() == 1) {
-            Node node = repositories.item(0);
-            node.getParentNode().removeChild(node);
-        }
-        NodeList pluginRepositories = doc.getElementsByTagName("pluginRepositories");
-        if (pluginRepositories.getLength() == 1) {
-            Node node = pluginRepositories.item(0);
-            node.getParentNode().removeChild(node);
-        }
-        Transformer transformer = TransformerFactory.newInstance().newTransformer();
-        transformer.transform(new DOMSource(doc), new StreamResult(pomFile));
+//        File pomFile = new File(pomFilePath);
+//        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(pomFile);
+//        NodeList repositories = doc.getElementsByTagName("repositories");
+//        if (repositories.getLength() == 1) {
+//            Node node = repositories.item(0);
+//            node.getParentNode().removeChild(node);
+//        }
+//        NodeList pluginRepositories = doc.getElementsByTagName("pluginRepositories");
+//        if (pluginRepositories.getLength() == 1) {
+//            Node node = pluginRepositories.item(0);
+//            node.getParentNode().removeChild(node);
+//        }
+//        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+//        transformer.transform(new DOMSource(doc), new StreamResult(pomFile));
     }
 
     public static boolean waitForTcpClosed(String host, int port, long loopTimeoutS) throws InterruptedException, UnknownHostException {
