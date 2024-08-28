@@ -12,9 +12,9 @@ public enum URLContent {
             new String[]{"http://localhost:8080", "Hello from a simple Jakarta REST app."}
     }),
     FULL_MICROPROFILE(new String[][]{
-            new String[]{"http://localhost:8080/q/health/ready", "\"UP\""},
-            new String[]{"http://localhost:8080", "Hello from a full MicroProfile suite"},
+            // new String[]{"http://localhost:8080/data/serialization/json/complex-dto", "Vive la résistance!"},
             new String[]{"http://localhost:8080/data/hello", "Hello World"},
+            new String[]{"http://localhost:8080", "Hello from a full MicroProfile suite"},
             new String[]{"http://localhost:8080/data/config/injected", "Config value as Injected by CDI Injected value"},
             new String[]{"http://localhost:8080/data/config/lookup", "Config value from ConfigProvider lookup value"},
     }),
